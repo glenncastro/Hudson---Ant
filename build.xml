@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project name="01_ant" default="main" basedir=".">
+	<target name="main">
+		<mkdir dir="target/classes"/>
+		<javac srcdir="src/main/java/" destdir="target/classes" includeantruntime="false"/>
+		<jar destfile="target/helloant.jar" basedir="target/classes">
+			<manifest>
+				<attribute name="Main-Class" value="net.hudsonlifestyle.HelloAnt"/>
+			</manifest>
+		</jar>
+	</target>
+	<target name="clean">
+		<delete dir="target"/>
+	</target>
+</project>
